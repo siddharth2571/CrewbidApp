@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_large"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_large"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <com.app.crewbid.ui.CustomEditText
+                    android:id="@+id/edtCardnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_edittext"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_border"
+                    android:hint="Card number"
+                    android:inputType="number"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+
+
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_edittext" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.app.crewbid.ui.CustomEditText
+                        android:id="@+id/edtExpMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_edittext"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_spinner_border"
+                        android:hint="Month"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textsize_edittext" />
+
+                    <com.app.crewbid.ui.CustomEditText
+                        android:id="@+id/edtExpYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_edittext"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_spinner_border"
+                        android:hint="Year"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textsize_edittext" />
+
+                    <com.app.crewbid.ui.CustomEditText
+                        android:id="@+id/edtPaymentCVC"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_edittext"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_spinner_border"
+                        android:hint="CVC"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textsize_edittext" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.app.crewbid.ui.CustomTextview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text="Make a Deposit"
+                        android:textColor="@color/color_text"
+                        android:textSize="@dimen/textsize_text_small" />
+
+                    <com.app.crewbid.ui.CustomEditText
+                        android:id="@+id/edtPaymentAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_edittext"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_spinner_border"
+                        android:hint="Amount"
+                        android:inputType="number"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textsize_edittext"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#000000" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtMakeDepositLive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="To make (Event Name) Live, please deposit $25 or more"
+                    android:textColor="@color/color_text"
+                    android:textSize="@dimen/textsize_text_small" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_edittext"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/bg_spinner_border"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:singleLine="true"
+                    android:text="Pay with PayPal"
+                    android:textColor="@color/color_text"
+                    android:textSize="@dimen/textsize_edittext"
+                    android:visibility="gone" />
+
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/paywithcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_edittext"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_spinner_border"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:singleLine="true"
+                    android:text="Pay with Card"
+                    android:textColor="@color/color_text"
+                    android:textSize="@dimen/textsize_edittext"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.app.crewbid.ui.CustomButton
+                android:id="@+id/btnPost"
+                android:layout_width="140dp"
+                android:layout_height="@dimen/height_button"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sel_btn_round_dark"
+                android:text="Post Event"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

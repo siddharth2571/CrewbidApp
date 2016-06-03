@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:isScrollContainer="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_large"
+            android:layout_marginRight="@dimen/activity_horizontal_margin_large"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingTop="10dp">
+
+            <com.app.crewbid.ui.CustomSpinner
+                android:id="@+id/spinnerCrew"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_border"
+                android:hint="Crew"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_edittext"
+                android:visibility="gone" />
+
+            <com.app.crewbid.ui.CustomEditText
+                android:id="@+id/edtEventName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_border"
+                android:hint="Crewvent Name"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_edittext" />
+
+            <com.app.crewbid.ui.CustomSpinner
+                android:id="@+id/spinnerDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_border"
+                android:hint="Select Date"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_edittext" />
+
+            <com.app.crewbid.ui.CustomEditText
+                android:id="@+id/edtNumberAttending"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_border"
+                android:hint="Number Attending"
+                android:inputType="number"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_edittext" />
+
+            <com.app.crewbid.ui.CustomEditText
+                android:id="@+id/edtBudget"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_border"
+                android:hint="Budget"
+                android:inputType="number"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_edittext" />
+
+            <com.app.crewbid.ui.CustomSpinner
+                android:id="@+id/spinnerCity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_border"
+                android:hint="City"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_edittext" />
+
+            <com.app.crewbid.ui.CustomSpinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edittext"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_spinner_border"
+                android:hint="Select Category"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_edittext" />
+
+            <com.app.crewbid.ui.CustomButton
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_button"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sel_btn_round_dark"
+                android:text="CONTINUE"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

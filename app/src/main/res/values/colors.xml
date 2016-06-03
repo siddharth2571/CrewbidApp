@@ -1,0 +1,20 @@
+<resources>
+
+    <color name="bg_login">#F3F3F3</color>
+    <color name="bg_btn_dark_black">#363636</color>
+    <color name="summery_txt_clr">#181818</color>
+
+    <color name="bg_btn_dark_black_h">#AA363636</color>
+    <color name="bg_btn_fb">#3B5998</color>
+    <color name="bg_btn_fb_h">#AA3B5998</color>
+    <color name="bg_spinner_border">#EBEBEB</color>
+    <color name="app_color">#363636</color>
+    <color name="color_text">#000000</color>
+    <color name="color_wghite">#ffffff</color>
+    <color name="colorStripDark">#fff</color>
+    <color name="colorStripLight">#9B9B9B</color>
+    <color name="text_color_activity">#616161</color>
+    <color name="white">#ffffff</color>
+    <color name="appBlue">#601967</color>
+
+</resources>

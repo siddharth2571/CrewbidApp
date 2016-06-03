@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp"
+    android:background="@drawable/bg_item_activity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.app.crewbid.ui.ImageViewProgress
+            android:id="@+id/imgThumb"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtName"
+            style="@style/textview_activity"
+            android:layout_toLeftOf="@+id/imgCurrency"
+            android:layout_toRightOf="@+id/imgThumb"
+            android:padding="5dp"
+            android:text="Crew Lolipop"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/txtPrice"
+            android:padding="5dp"
+            android:src="@drawable/ic_currency" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtPrice"
+            style="@style/textview_activity"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:text="Value-$100" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtDaysLeft"
+            style="@style/textview_activity"
+            android:layout_below="@+id/txtName"
+            android:layout_toRightOf="@+id/imgThumb"
+            android:padding="5dp"
+            android:text="bid_id" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtDescription2"
+            style="@style/textview_activity"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/txtDaysLeft"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="+\n Upload attachment" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtDescription"
+            style="@style/textview_activity"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/txtDaysLeft"
+            android:layout_toRightOf="@+id/txtDescription2"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Javier&apos;s Birthday Bash!" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDescription"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.app.crewbid.ui.CustomTextview
+                android:id="@+id/txtBids"
+                style="@style/textview_activity"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="6 Bids" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_divider_vertical" />
+
+            <com.app.crewbid.ui.CustomTextview
+                android:id="@+id/txtTrackers"
+                style="@style/textview_activity"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="31 Trackers" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_divider_vertical" />
+
+            <com.app.crewbid.ui.CustomTextview
+                android:id="@+id/txtStatus"
+                style="@style/textview_activity"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="awarded" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

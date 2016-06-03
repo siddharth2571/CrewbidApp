@@ -1,0 +1,371 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                cardview:cardUseCompatPadding="true"
+                cardview:cardElevation="4dp"
+                cardview:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_logo" />
+
+                    <com.app.crewbid.ui.CustomTextview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="CREWBID"
+                        android:textColor="@android:color/black"
+                        android:textSize="42sp" />
+
+                    <com.app.crewbid.ui.CustomTextview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="WHERE PLACES COMPLETE FOR YOU"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/linearMemberVendor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.app.crewbid.ui.CustomTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="20dp"
+                            android:text="Please choose one"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/relativeMembers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true">
+
+                            <com.app.crewbid.ui.CustomTextview
+                                android:id="@+id/txtMembers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_edittext"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/bg_edittext"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:singleLine="true"
+                                android:text="Members"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/textsize_edittext" />
+
+                            <CheckBox
+                                android:id="@+id/chkMembers"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginRight="16dp"
+                                android:background="@drawable/sel_check_round"
+                                android:button="@drawable/sel_check_round"
+                                android:checked="false"
+                                android:enabled="false"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize_edittext" />
+                        </RelativeLayout>
+
+                        <com.app.crewbid.ui.CustomTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:text="Post, review and award the best bid for your crew."
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+
+                        <RelativeLayout
+                            android:id="@+id/relativeVendors"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:clickable="true">
+
+                            <com.app.crewbid.ui.CustomTextview
+                                android:id="@+id/txtVendors"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_edittext"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/bg_edittext"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:singleLine="true"
+                                android:text="Vendors"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/textsize_edittext" />
+
+                            <CheckBox
+                                android:id="@+id/chkVendors"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginRight="16dp"
+                                android:background="@drawable/sel_check_round"
+                                android:button="@drawable/sel_check_round"
+                                android:checked="true"
+                                android:enabled="false"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize_edittext" />
+                        </RelativeLayout>
+
+                        <com.app.crewbid.ui.CustomTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:text="Search our leads for group events in your city."
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="Email"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="Username"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtConfirmPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="Confirm Password"
+                            android:inputType="textPassword"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="Phone No"
+                            android:inputType="number"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/debitcard_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtCardHolderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="CardHolderName"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtDebitCardNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="DebitCardNumber"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtExpiryMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="ExpiryMonth"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtExpiryYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="ExpiryYear"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomEditText
+                            android:id="@+id/edtDebitCvv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_edittext"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="CVV Number"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/textsize_edittext" />
+
+                        <com.app.crewbid.ui.CustomButton
+                            android:id="@+id/btnSkip"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_button"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/sel_btn_round_dark"
+                            android:text="SKIP"
+                            android:textColor="@android:color/white" />
+
+
+                    </LinearLayout>
+
+
+                    <com.app.crewbid.ui.CustomButton
+                        android:id="@+id/btnContinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_button"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/sel_btn_round_dark"
+                        android:text="CONTINUE"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

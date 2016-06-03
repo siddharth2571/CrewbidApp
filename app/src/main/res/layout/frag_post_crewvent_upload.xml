@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearBottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_large"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_large"
+                android:background="@drawable/shape_border_upload_crewvent"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imgUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bg_plus" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgUpload"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="26dp"
+                    android:text="upload logo"
+                    android:textColor="@color/color_text"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeAttachment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_large"
+                android:layout_marginRight="@dimen/activity_horizontal_margin_large"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_border_upload_crewvent"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imgAttachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bg_plus" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgAttachment"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="26dp"
+                    android:text="upload attachment"
+                    android:textColor="@color/color_text"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <com.app.crewbid.ui.CustomButton
+            android:id="@+id/btnSkip"
+            android:layout_width="140dp"
+            android:layout_height="@dimen/height_button"
+            android:layout_marginRight="26dp"
+            android:background="@drawable/sel_btn_round_dark"
+            android:text="SKIP"
+            android:textColor="@android:color/white" />
+
+        <com.app.crewbid.ui.CustomButton
+            android:id="@+id/btnContinue"
+            android:layout_width="140dp"
+            android:layout_height="@dimen/height_button"
+            android:background="@drawable/sel_btn_round_dark"
+            android:text="CONTINUE"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

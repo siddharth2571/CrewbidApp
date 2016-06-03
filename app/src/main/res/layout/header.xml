@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#363636"
+    android:orientation="vertical">
+
+    <!-- android:background="@drawable/bg_top_ten_header" -->
+
+    <ImageView
+        android:id="@+id/imgDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="25dp"
+        android:src="@drawable/ic_menu" />
+
+    <com.app.crewbid.ui.CustomTextview
+        android:id="@+id/txtHeaderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/imgSearch"
+        android:layout_toRightOf="@+id/imgDrawer"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="Home"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imgSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imgOverflow"
+        android:paddingRight="20dp"
+        android:src="@drawable/ic_search"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgOverflow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="16dp"
+        android:src="@drawable/ic_overflow"
+        android:visibility="gone" />
+
+</RelativeLayout>

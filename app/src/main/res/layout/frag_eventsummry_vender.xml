@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_activity"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp">
+
+    <RelativeLayout
+        android:id="@+id/summry1Rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/eventsummerydetail">
+
+        <com.app.crewbid.ui.ImageViewProgress
+            android:id="@+id/imgThumb"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtName"
+            style="@style/textview_activity"
+            android:layout_toRightOf="@+id/imgThumb"
+            android:padding="5dp"
+            android:text="Crew Lolipop"
+            android:textColor="@color/summery_txt_clr"
+
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_toLeftOf="@+id/txtPrice"
+            android:padding="5dp"
+            android:src="@drawable/ic_currency"
+            android:visibility="gone" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtPrice"
+            style="@style/textview_activity"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imgThumb"
+
+            android:text="Budget-$100"
+            android:textColor="@color/summery_txt_clr" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtDaysLeft"
+            style="@style/textview_activity"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txtName"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txtPrice"
+            android:drawableLeft="@drawable/ic_alarm"
+            android:drawablePadding="5dp"
+            android:padding="5dp"
+            android:text="DaysLeft"
+            android:textColor="@color/summery_txt_clr" />
+
+        <RelativeLayout
+            android:id="@+id/midelLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDaysLeft"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/midRect"
+                android:src="@drawable/summery_picture_btn"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/midRect"
+                android:layout_width="160dp"
+                android:layout_height="94dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+                android:src="@drawable/summery_rectangle14"
+                android:visibility="gone" />
+
+            <com.app.crewbid.ui.CustomTextview
+                style="@style/textview_activity"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/editTxtMidRect"
+                android:layout_centerInParent="true"
+                android:text="$"
+                android:textSize="33dp" />
+
+            <com.app.crewbid.ui.CustomEditText
+                android:id="@+id/editTxtMidRect"
+                style="@style/textview_activity"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:minWidth="70dp"
+                android:text="70"
+                android:textColor="@color/summery_txt_clr"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/midRect"
+                android:src="@drawable/summery_settings"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtDescription"
+            style="@style/textview_activity"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/midelLL"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Javier&apos;s Birthday Bash!" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/summeryLL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summry1Rl"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtBids"
+            style="@style/textview_activity"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="RSVP" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_divider_vertical" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtCityName"
+            style="@style/textview_activity"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="31 Trackers" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_divider_vertical" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtStatus"
+            style="@style/textview_activity"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="Jan 31" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/RR2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summeryLL1"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/baseProgress1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/summery_base_progress" />
+
+        <ImageView
+            android:id="@+id/summeryProgresss"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/summery_green_progress" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtContributors"
+            style="@style/textview_activity"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/summeryProgresss"
+            android:gravity="center"
+            android:text="Contributors" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtContributorsValue"
+            style="@style/textview_activity"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/txtContributors"
+            android:gravity="center"
+            android:text="1" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtAddFunds"
+            style="@style/textview_activity"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/summeryProgresss"
+            android:gravity="center"
+            android:text="Add Funds" />
+
+        <com.app.crewbid.ui.CustomTextview
+            android:id="@+id/txtAddFundsValue"
+            style="@style/textview_activity"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txtContributors"
+            android:gravity="center"
+            android:text="1" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/RR2"
+        android:layout_marginTop="10dp">
+
+        <com.app.crewbid.ui.CustomButton
+            android:id="@+id/btnAddTrackList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/appBlue"
+            android:padding="5dp"
+            android:text="Add To Track List"
+            android:textColor="@color/white" />
+
+        <com.app.crewbid.ui.CustomButton
+            android:id="@+id/btnPlaceBid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:background="@color/appBlue"
+            android:padding="5dp"
+            android:text="Place a Bid"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_slide_menu" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/ImgUser"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/temp_profile" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Jesse Scott"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="16dp"
+                    android:text="Home"
+                    android:textColor="@android:color/white" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtPostCrewvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="16dp"
+                    android:text="Post a Crewvent"
+                    android:textColor="@android:color/white" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtTrackList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="16dp"
+                    android:text="Track List"
+                    android:visibility="gone"
+                    android:textColor="@android:color/white" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtBrowseVendors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="16dp"
+                    android:text="Broswe Vendors"
+                    android:textColor="@android:color/white" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="16dp"
+                    android:text="Notifications"
+                    android:textColor="@android:color/white" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtTopTen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="16dp"
+                    android:text="Top 10"
+                    android:textColor="@android:color/white" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="16dp"
+                    android:text="Settings"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/txtSwitchTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#363636"
+                    android:gravity="center"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:text="Switch to Vendor"
+                    android:textColor="@android:color/white" />
+
+                <com.app.crewbid.ui.CustomTextview
+                    android:id="@+id/textLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#363636"
+                    android:gravity="center"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:text="Logout"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
