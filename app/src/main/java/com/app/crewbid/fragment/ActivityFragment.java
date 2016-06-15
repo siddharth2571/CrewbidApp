@@ -189,7 +189,7 @@ public class ActivityFragment extends Fragment implements OnItemClickListener,
                     MainFragmentActivity.toast(getActivity(),
                             clsResponse.getDispMessage());
                 }
-            }else{
+            } else {
                 lstProductList.setEmptyView(nobidfoundtxt);
             }
         }
@@ -296,9 +296,11 @@ public class ActivityFragment extends Fragment implements OnItemClickListener,
 
         Fragment fragment = new EventFragment();
         fragment.setArguments(bundle);
+
+
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 
-        fragmentManager.beginTransaction().replace(R.id.container2, fragment).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.container, fragment).addToBackStack(null).commit();
 
     }
 }

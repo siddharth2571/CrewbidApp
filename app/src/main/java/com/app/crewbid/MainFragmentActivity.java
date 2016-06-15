@@ -51,6 +51,7 @@ public class MainFragmentActivity extends ActionBarActivity implements
     //sam
     private List<Fragment> mFragmentsStack = new ArrayList<>();
     private FragmentManager mFragmentManager;
+    public static boolean visibilityState = false;
 
     DrawerLayout mDrawerLayout;
 
@@ -72,6 +73,8 @@ public class MainFragmentActivity extends ActionBarActivity implements
                 (DrawerLayout) findViewById(R.id.drawer_layout));
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         init();
+
+
     }
 
     private void init() {
@@ -79,9 +82,9 @@ public class MainFragmentActivity extends ActionBarActivity implements
         imgDrawer.setOnClickListener(this);
 
         txtHeaderTitle = (TextView) findViewById(R.id.txtHeaderTitle);
-
-        popBackStackAll();
         switchContent(new HomeFragment(), true, FRAG_HOME);
+//        popBackStackAll();
+
     }
 
     @Override
@@ -172,19 +175,15 @@ public class MainFragmentActivity extends ActionBarActivity implements
     }
 
     public void switchContent(Fragment fragment, boolean isAddBackStack, int tag) {
-        FragmentTransaction ft = mFragmentManager.beginTransaction();
-//        ft.replace(R.id.container, fragment, String.valueOf(tag));
+//        FragmentTransaction ft = mFragmentManager.beginTransaction();
 
-        //if (isAddBackStack)
-        //ft.addToBackStack(null);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+//        fragmentManager.popBackStack();
+        fragmentManager.beginTransaction().replace(R.id.container, fragment).addToBackStack(null).commit();
 
-        if (isAddBackStack)
-            ft.addToBackStack("1");
+//        ft.addToBackStack(null);
+//        ft.replace(R.id.container, fragment).commit();
 
-        ft.replace(R.id.container, fragment).commit();
-
-//        ft.commit();
-//        CURRENT_TOP_FRAGMENT = Integer.valueOf(tag);
     }
 
 
@@ -201,9 +200,17 @@ public class MainFragmentActivity extends ActionBarActivity implements
         if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawerLayout.closeDrawers();
         } else {
+//            switchContent(new HomeFragment(), true, 0);
+//            removeFragment();
             if (mFragmentManager.getBackStackEntryCount() > 1) {
                 Log.i("MainActivity", "popping backstack");
-                mFragmentManager.popBackStack();
+//                mFragmentManager.popBackStack();
+//                popBackStackAll();
+                if (visibilityState) {
+                    finish();
+                } else {
+                    switchContent(new HomeFragment(), true, 0);
+                }
             } else {
                 finish();
             }
@@ -266,7 +273,6 @@ public class MainFragmentActivity extends ActionBarActivity implements
             fragment.onActivityResult(requestCode, resultCode, intent);
         }
     }
-
 
 
 }

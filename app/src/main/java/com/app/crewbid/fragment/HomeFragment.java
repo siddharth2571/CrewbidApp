@@ -35,21 +35,24 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         View rootView = inflater.inflate(R.layout.fragment_home, container,
                 false);
         FacebookSdk.sdkInitialize(getContext().getApplicationContext());
+        initControls(rootView);
 
         return rootView;
     }
 
-    @Override
+    /*@Override
     public void onActivityCreated(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onActivityCreated(savedInstanceState);
-        initControls(getView());
-    }
+
+    }*/
+
 
     @Override
     public void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
+        MainFragmentActivity.visibilityState = true;
         ((MainFragmentActivity) getContext()).setHeader(getActivity()
                 .getString(R.string.home));
     }
@@ -68,11 +71,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        MainFragmentActivity.visibilityState = false;
+    }
+
+    @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
         switch (v.getId()) {
         }
     }
+
 
     @Override
     public void onDestroyView() {
@@ -80,6 +90,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         // viewPager.clearOnPageChangeListeners();
         // }
         super.onDestroyView();
+        MainFragmentActivity.visibilityState = false;
 
     }
 

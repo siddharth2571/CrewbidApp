@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,7 +88,7 @@ public class EventSummeryListAdapter extends BaseAdapter implements KeyInterface
 
         clsEventSummeryLis.setBidDetails(Utility.bids);
 
-        Log.i("thumb", EventSummeryListAdapter.imageUrl);
+//        Log.i("thumb", EventSummeryListAdapter.imageUrl);
 
         Picasso.with(contex).load(EventSummeryListAdapter.imageUrl).error(contex.getResources().getDrawable(R.drawable.temp_profile))
                 .into(holder.imgThumb);

@@ -18,17 +18,12 @@ public class NetworkParam implements KeyInterface {
     public static final String URL = "www.crewbid.com/api/services.php?";
     public static final String METHOD_LOGIN = URL + "function=login";
     public static final String METHOD_SIGNUP = URL + "function=signup";
-    public static final String METHOD_POST_CREW_ADD_NEW_EVENT = URL
-            + "function=prepare_add_new_event_page";
+    public static final String METHOD_POST_CREW_ADD_NEW_EVENT = URL + "function=prepare_add_new_event_page";
     public static final String METHOD_ALL_CREW_EVENTS = URL + "function=all_crew_events";
     public static final String METHOD_MY_CREW_EVENTS = URL + "function=my_crew_events";
-
     public static final String METHOD_MY_CREW_EVENTS_SUMMERY = URL + "function=get_event_detail";
-
     public static final String METHOD_ADD_NEW_EVENT = URL + "function=add_new_event";
-
     public static final String METHOD_PAYMENT_REQ = URL + "function=payment_request";
-
     public static final String METHOD_ADD_BID_TO_EVENT = URL + "function=add_bid_to_event";
     public static final String METHOD_GET_BIDS_OF_EVENT = URL + "function=get_bids_of_event";
     public static final String METHOD_TRANSFER_PAYMENT = URL + "function=transfer_payment";
@@ -151,7 +146,7 @@ public class NetworkParam implements KeyInterface {
                         .get(addNewEvent.getPosCity()).getId().toString();
             }
         }
-        mapParam.put("city", "1");
+        mapParam.put("city", cityId);
         mapParam.put("ccrecepient", "");
         mapParam.put("filter_budget", addNewEvent.getFilterBudget()); // dynamic karavi
         mapParam.put("filtered_budgetid", "");
@@ -195,7 +190,7 @@ public class NetworkParam implements KeyInterface {
         map.put("user_id", userId);
         map.put("status", status);
         map.put("page", "" + page);
-        Utility.log("tag", "Request : " + map.toString());
+        Log.e("tag", "Request : " + map.toString());
         return map;
     }
 

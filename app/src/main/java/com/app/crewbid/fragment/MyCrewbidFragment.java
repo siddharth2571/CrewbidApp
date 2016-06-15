@@ -141,20 +141,21 @@ public class MyCrewbidFragment extends Fragment implements AdapterView.OnItemCli
                             .getObject();
                     productLists.addAll(productList);
 
+                    setAdapter(productLists);
+
 //                    adapter.setArrayList(productLists);
 //                    adapter.notifyDataSetChanged();
                     isRefreshing = false;
                     offsetNo++;
-                    lstProductList.setEmptyView(nobidfoundtxt);
 
                 } else {
                     offsetNo = -1;
-                    lstProductList.setEmptyView(nobidfoundtxt);
                     MainFragmentActivity.toast(getActivity(),
                             clsResponse.getDispMessage());
                 }
             }
         }
+
 
         @Override
         public ClsNetworkResponse doBackGround(ClsNetworkResponse clsResponse) {
@@ -170,7 +171,7 @@ public class MyCrewbidFragment extends Fragment implements AdapterView.OnItemCli
     };
 
     public void setAdapter(ArrayList<ClsProductList> productListsdetail) {
-        if (productListsdetail.isEmpty() && productListsdetail.size() == 0) {
+        if (!productListsdetail.isEmpty()) {
             // sometime it layout inflater null object refernce
             try {
                 adapter = new ProductListAdapter(getActivity(), this, productListsdetail);
@@ -179,7 +180,6 @@ public class MyCrewbidFragment extends Fragment implements AdapterView.OnItemCli
                 e.printStackTrace();
             }
         } else {
-            lstProductList.setVisibility(View.VISIBLE);
             lstProductList.setEmptyView(nobidfoundtxt);
         }
     }
@@ -248,12 +248,10 @@ public class MyCrewbidFragment extends Fragment implements AdapterView.OnItemCli
         //set Fragmentclass Arguments
 //        Fragmentclass fragobj=new Fragmentclass();
 
-
         Fragment fragment = new EventFragment();
         fragment.setArguments(bundle);
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-
-        fragmentManager.beginTransaction().replace(R.id.container2, fragment).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
     }
 }
 

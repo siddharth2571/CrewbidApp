@@ -137,8 +137,8 @@ public class LoginFragment extends Fragment implements OnClickListener,
         });
 
         if (IS_DEBUG) {
-            edtUsername.setText("member");
-            edtPassword.setText("member");
+            edtUsername.setText("viruu");
+            edtPassword.setText("viruu");
         }
 
     }
