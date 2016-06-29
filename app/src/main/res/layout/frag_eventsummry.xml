@@ -160,6 +160,7 @@
         <LinearLayout
             style="@style/textview_activity"
             android:layout_weight="0.60"
+            android:gravity="center"
             android:orientation="vertical">
 
             <com.app.crewbid.ui.CustomTextview

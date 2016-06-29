@@ -44,6 +44,7 @@ public class Utility {
 
 
     public static String STATIC_IMAGE_URL = "http://www.crewbid.com/uploads/attachments/auctions/";
+    public static String daysLeft = "0";
 
 
     public static String getBidIsAwarded() {

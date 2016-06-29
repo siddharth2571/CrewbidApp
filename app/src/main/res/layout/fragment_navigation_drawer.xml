@@ -60,7 +60,7 @@
                     android:paddingBottom="16dp"
                     android:paddingLeft="20dp"
                     android:paddingTop="16dp"
-                    android:text="Post a Crewvent"
+                    android:text="Post a Crewevent"
                     android:textColor="@android:color/white" />
 
                 <com.app.crewbid.ui.CustomTextview

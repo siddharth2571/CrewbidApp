@@ -114,6 +114,7 @@
             android:text="Award" />
 
         <LinearLayout
+            android:id="@+id/product_ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -126,6 +127,7 @@
                 android:id="@+id/txtBids"
                 style="@style/textview_activity"
                 android:layout_weight="1.0"
+
                 android:gravity="center"
                 android:text="6 Bids" />
 

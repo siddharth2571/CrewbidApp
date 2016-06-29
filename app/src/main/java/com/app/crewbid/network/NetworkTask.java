@@ -72,7 +72,6 @@ public class NetworkTask extends AsyncTask<String, Void, ClsNetworkResponse>
             clsResponse.setDispMessage("Please check url");
             return clsResponse;
         }
-
         if (!url.startsWith("http")) {
             url = "http://" + url;
         }
@@ -93,9 +92,10 @@ public class NetworkTask extends AsyncTask<String, Void, ClsNetworkResponse>
         clsResponse.setNetworkConneted(true);
         clsResponse.setHashMapParams(hashMapParams);
         Log.e("tag", clsResponse.getUrl());
+        Log.i("network", clsResponse.getResult_String());
 
-        NetworkConnectionClient client = new NetworkConnectionClient(
-                clsResponse);
+
+        NetworkConnectionClient client = new NetworkConnectionClient(clsResponse);
         if (hashMapParams != null)
             Log.e("Request param", "@" + hashMapParams.toString());
         Log.e("tag", hashMapParams.toString());

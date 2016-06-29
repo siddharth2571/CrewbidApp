@@ -89,7 +89,6 @@ public class ProductListAdapter extends BaseAdapter implements KeyInterface {
 
         Log.i("thumbimg", Utility.STATIC_IMAGE_URL + clsProductList.getProductThumb());
 
-
         holder.txtName.setText(Utility.isNotNull(clsProductList
                 .getProductTitle()) ? clsProductList.getProductTitle() : "");
 

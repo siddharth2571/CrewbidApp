@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.crewbid.AppDelegate;
 import com.app.crewbid.MainFragmentActivity;
 import com.app.crewbid.R;
 import com.app.crewbid.fragment.HomeFragment;
@@ -25,6 +26,7 @@ import com.app.crewbid.network.AsyncTaskCompleteListener;
 import com.app.crewbid.network.ClsNetworkResponse;
 import com.app.crewbid.network.NetworkParam;
 import com.app.crewbid.network.NetworkTask;
+import com.app.crewbid.prefs.PreferenceData;
 import com.app.crewbid.utility.ProgressDialogUtility;
 import com.app.crewbid.utility.Utility;
 import com.stripe.android.Stripe;
@@ -275,6 +277,68 @@ public class PostCrewventPaymentFragment extends Fragment implements
                     MainFragmentActivity.toast(getActivity(),
                             clsResponse.getDispMessage());
 
+                    Log.i("Result", clsResponse.getPkId() + "" + clsResponse.getResult_String() + "---" + clsResponse.getDispMessage());
+
+                    setNotifyPayPal();
+//                    gotoHomeFragment();
+
+//                    saveCreditCard();
+
+                    // clsAddNewEvent = addNewEvent;
+                    // setData();
+                } else {
+                    MainFragmentActivity.toast(getActivity(),
+                            clsResponse.getDispMessage());
+                }
+            }
+        }
+
+        @Override
+        public ClsNetworkResponse doBackGround(ClsNetworkResponse clsResponse) {
+            // TODO Auto-generated method stub
+            if (!clsResponse.isSuccess()
+                    || clsResponse.getResult_String() == null)
+                return clsResponse;
+            if (clsResponse.getRequestCode() == REQ_POST_NEW_EVENT) {
+                clsResponse = new ParserPostNewEvent(clsResponse).parse();
+            }
+            return clsResponse;
+        }
+    };
+
+
+    private void setNotifyPayPal() {
+        NetworkTask networkTask = new NetworkTask(getActivity());
+        networkTask.setMultipart(true);
+        networkTask.setmCallback(notifyPaypalAsync);
+        Log.e("setPaypal", "============");
+        String userId = AppDelegate.getString(PreferenceData.USERID);
+        String projectId = "";
+        String txt_id = "";
+        Amount = edtPaymentAmount.getText().toString();
+//String projectId=PostCrewventFormFragment.clsAddNewEvent.
+
+        networkTask.setHashMapParams(new NetworkParam().getNotifyPaypal(userId, projectId, Amount, txt_id));
+//                .getPostNewEventParam(PostCrewventFormFragment.clsAddNewEvent, Token, Amount));
+        networkTask.execute(NetworkParam.METHOD_ADD_NEW_EVENT,
+                String.valueOf(REQ_POST_NEW_EVENT));
+        ProgressDialogUtility.show(getActivity(), null, false);
+
+    }
+
+
+//    ========================   NotifyPaypal ================================
+
+    private AsyncTaskCompleteListener notifyPaypalAsync = new AsyncTaskCompleteListener() {
+        @Override
+        public void onTaskComplete(ClsNetworkResponse clsResponse) {
+            // TODO Auto-generated method stub
+            if (clsResponse.getRequestCode() == REQ_POST_NEW_EVENT) {
+                ProgressDialogUtility.dismiss();
+                if (clsResponse.isSuccess() && clsResponse.getObject() != null) {
+                    MainFragmentActivity.toast(getActivity(),
+                            clsResponse.getDispMessage());
+
                     Log.i("Result", "" + clsResponse.getResult_String() + "---" + clsResponse.getDispMessage());
 
                     gotoHomeFragment();
@@ -330,7 +394,6 @@ public class PostCrewventPaymentFragment extends Fragment implements
                     gotoHomeFragment();
                     // clsAddNewEvent = addNewEvent;
                     // setData();
-
 
                 } else {
                     MainFragmentActivity.toast(getActivity(),

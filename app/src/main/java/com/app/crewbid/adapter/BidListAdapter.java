@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -89,6 +90,9 @@ public class BidListAdapter extends BaseAdapter implements KeyInterface {
             holder.txtTrackers = (TextView) convertView.findViewById(R.id.txtTrackers);
             holder.txtStatus = (TextView) convertView.findViewById(R.id.txtStatus);
             holder.imgThumb = (CircleImageView) convertView.findViewById(R.id.imgThumb);
+            holder.product_ll = (LinearLayout) convertView.findViewById(R.id.product_ll);
+
+            holder.product_ll.setVisibility(View.GONE);
 
             convertView.setTag(holder);
         } else {
@@ -107,7 +111,7 @@ public class BidListAdapter extends BaseAdapter implements KeyInterface {
         holder.txtDescription.setText(Utility.isNotNull(clsProductList
                 .getProposal()) ? clsProductList
                 .getProposal() : "");
-        holder.txtPrice.setText("- Total " + (Utility.isNotNull(clsProductList
+        holder.txtPrice.setText("Bid $ " + (Utility.isNotNull(clsProductList
                 .getBidamount()) ? clsProductList.getBidamount() : "0"));
 //        holder.txtBids.setText(Utility.isNotNull(clsProductList.getProductBidCount()) ? clsProductList.getProductBidCount() + " Bids" : "0" + " Bids");
 //        holder.txtTrackers.setText(Utility.isNotNull(clsProductList
@@ -205,6 +209,7 @@ public class BidListAdapter extends BaseAdapter implements KeyInterface {
         TextView txtName = null, txtDescription = null, txtPrice = null,
                 txtBidId = null, txtBids = null, txtTrackers = null, txtStatus = null, txtPhone = null;
         CircleImageView imgThumb = null;
+        LinearLayout product_ll = null;
     }
 
     public ArrayList<ClsBidOfEvent> getArrayList() {

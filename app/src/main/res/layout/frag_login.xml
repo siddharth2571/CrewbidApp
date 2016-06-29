@@ -15,81 +15,94 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
                 android:layout_width="match_parent"
-                android:layout_height="416dp"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/bg_login_white"
-                android:orientation="vertical"
-                android:paddingBottom="20dp"
-                android:paddingTop="20dp">
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                cardview:cardCornerRadius="6dp"
+                cardview:cardElevation="4dp"
+                cardview:cardUseCompatPadding="true">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_logo" />
 
-                <com.app.crewbid.ui.CustomTextview
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:text="CREWBID"
-                    android:textColor="@android:color/black"
-                    android:textSize="42sp" />
-
-                <com.app.crewbid.ui.CustomTextview
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:text="WHERE PLACES COMPLETE FOR YOU"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp" />
-
-                <com.app.crewbid.ui.CustomEditText
-                    android:id="@+id/edtUsername"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/height_edittext"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/bg_edittext"
-                    android:hint="Username"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:singleLine="true"
-                    android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_edittext" />
-
-                <com.app.crewbid.ui.CustomEditText
-                    android:id="@+id/edtPassword"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/height_edittext"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/bg_edittext"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:singleLine="true"
-                    android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/textsize_edittext" />
-
-                <com.app.crewbid.ui.CustomButton
-                    android:id="@+id/btnLogin"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/height_button"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/sel_btn_round_dark"
-                    android:text="LOGIN"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_logo" />
+
+                    <com.app.crewbid.ui.CustomTextview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="CREWBID"
+                        android:textColor="@android:color/black"
+                        android:textSize="42sp" />
+
+                    <com.app.crewbid.ui.CustomTextview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="WHERE PLACES COMPLETE FOR YOU"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <com.app.crewbid.ui.CustomEditText
+                        android:id="@+id/edtUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_edittext"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_edittext"
+                        android:hint="Username"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textsize_edittext" />
+
+                    <com.app.crewbid.ui.CustomEditText
+                        android:id="@+id/edtPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_edittext"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_edittext"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textsize_edittext" />
+
+                    <com.app.crewbid.ui.CustomButton
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_button"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/sel_btn_round_dark"
+                        android:text="LOGIN"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
 
@@ -98,14 +111,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:isScrollContainer="false"
         android:orientation="vertical">
 
         <com.app.crewbid.ui.CustomButton
             android:id="@+id/btnSignup"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/height_button"
-            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:background="@drawable/sel_btn_dark"
             android:text="SIGNUP"
             android:textColor="@android:color/white" />
@@ -114,8 +126,8 @@
             android:id="@+id/facebooklogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:background="@drawable/sel_btn_fb"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp"
             android:text="SIGNUP VIA FACEBOOK"
             android:textColor="@android:color/white" />
 

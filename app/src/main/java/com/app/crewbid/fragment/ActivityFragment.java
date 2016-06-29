@@ -267,6 +267,7 @@ public class ActivityFragment extends Fragment implements OnItemClickListener,
 //		Log.d("position:- ", productLists.get(position).getProductId());
         Log.d("getProductTitle:- ", productLists.get(position).getProductTitle());
         Utility.CrewFunded = productLists.get(position).getCrewsFunded();
+        Utility.daysLeft = productLists.get(position).getDaysLeft();
         Utility.Budget = productLists.get(position).getCrewsFunded();
 //        Utility.bidIsAwarded = productLists.get(position).getStatusIsAward();
         EventSummeryListAdapter.imageUrl = Utility.STATIC_IMAGE_URL + productLists.get(position).getProductThumb();

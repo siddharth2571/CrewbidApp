@@ -29,7 +29,7 @@ public class NetworkParam implements KeyInterface {
     public static final String METHOD_TRANSFER_PAYMENT = URL + "function=transfer_payment";
     public static final String METHOD_SET_AWARD_OF_EVENT = URL + "function=update_bids_status_on_my_event";
     public static final String METHOD_SET_CARD_DETAIL_UPDATE = URL + "function=update_account";
-
+    public static final String METHOD_SET_NOTIFY_PAYPAL = URL + "function=notify_paypal";
 
     // Request : user_id=247,status=all,page=1
 
@@ -178,6 +178,7 @@ public class NetworkParam implements KeyInterface {
         return mapParam;
     }
 
+
     public HashMap<String, Object> getAddNewParam(String uId) {
         HashMap<String, Object> mapParam = new HashMap<String, Object>();
         mapParam.put("user_id", uId);
@@ -236,6 +237,15 @@ public class NetworkParam implements KeyInterface {
         map.put("vendorId", vendorid);
         map.put("amount", amount);
         Utility.log("tag", "Request : " + map.toString());
+        return map;
+    }
+
+    public HashMap<String, Object> getNotifyPaypal(String userid, String project_id, String ammount, String txn_id) {
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put("user_id", userid);
+        map.put("project_id", project_id);
+        map.put("ammount", ammount);
+        map.put("txn_id", txn_id);
         return map;
     }
 

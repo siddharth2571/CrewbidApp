@@ -101,8 +101,10 @@ public class EventSummeryListAdapter extends BaseAdapter implements KeyInterface
 
         holder.txtName.setText(Utility.isNotNull(clsEventSummeryLis
                 .getProjectTitle()) ? clsEventSummeryLis.getProjectTitle() : "");
-        holder.txtDays.setText(Utility.isNotNull(clsEventSummeryLis
-                .getDateStarts()) ? (setDateDifferent(clsEventSummeryLis.getDateStarts()) + " Days Left") : "");
+//        holder.txtDays.setText(Utility.isNotNull(clsEventSummeryLis
+//                .getDateStarts()) ? (setDateDifferent(clsEventSummeryLis.getDateStarts()) + " Days Left") : "");
+
+        holder.txtDays.setText(Utility.daysLeft + " Days Left");
 
         holder.txtDescription.setText(Utility.isNotNull(clsEventSummeryLis
                 .getProjectDescription()) ? clsEventSummeryLis
